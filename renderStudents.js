@@ -2,7 +2,7 @@
 function renderStudents(students) {
     return `
         <div class="text-center mt-5">
-            <code>${JSON.stringify(students)}</code>
+            ${students.map(element => `${element.name} is present: ${element.isPresent}.<br>`)}
         </div>
     `
 }

@@ -1,10 +1,10 @@
 
 function renderNametags(nametags) {
-    return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(nametags)}</code>
-        </div>
-    `
+    var arr = [];
+    for (var i = 0; i < nametags.length; i++) {
+        arr.push(`<div>${nametags[i]}</div>`);
+    };
+    return `<div class="text-center mt-5">${arr.join(" ")}</div>`;
 }
 
 function nametags() {
