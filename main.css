@@ -1,1 +1,22 @@
 /* Type whatever CSS you need here! */
+
+/************************************/
+/* renderStudents */
+.present {
+    background-color: lightgreen;
+}
+
+.absent {
+    background-color: red;
+}
+
+/************************************/
+/* renderPokerHand */
+.poker-row {
+    display: flex;
+}
+
+.poker-cars {
+    height: 160px;
+    margin: 2px;
+}

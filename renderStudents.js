@@ -1,8 +1,26 @@
 
 function renderStudents(students) {
+    // return `
+    //     <div class="text-center mt-5">
+    //         <h1>Roll Call!</h1>
+    //         ${students.map(element => `${element.name} is present: ${element.isPresent}.<br>`).join(" ")}
+    //     </div>
+    // `
+
+    let studentsArray = students.map(function(student) {
+
+        return `
+            <div class="${student.isPresent ? "present" : "absent"}">
+                <h2>${student.name}</h2>
+                <span>${student.isPresent ? "Present" : "Abscent"}</span>
+            </div>
+        `
+    });
+
     return `
         <div class="text-center mt-5">
-            ${students.map(element => `${element.name} is present: ${element.isPresent}.<br>`)}
+            <h1> Roll Call! </h1>
+            ${studentsArray.join("")}
         </div>
     `
 }

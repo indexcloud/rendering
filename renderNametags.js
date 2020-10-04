@@ -2,7 +2,17 @@
 function renderNametags(nametags) {
     var arr = [];
     for (var i = 0; i < nametags.length; i++) {
-        arr.push(`<div>${nametags[i]}</div>`);
+        let html = `
+            <div class="nametag">
+                <div class="nametag-header">Hello, my name is</div>
+                <div class="nametag-body">
+                    <h1>${nametags[i]}</h1>
+                </div>
+            </div>
+        `;
+        
+        
+        arr.push(html);
     };
     return `<div class="text-center mt-5">${arr.join(" ")}</div>`;
 }

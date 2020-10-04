@@ -3,8 +3,10 @@ function renderPokerHand(pokerHand) {
     // HINT: You can use <img /> tags that point to the card images in the /cards folder
     return `
         <div class="text-center mt-5">
-            ${pokerHand.map(element => `<img src="cards/${element.value}${element.suit}.png">
-            </img>`)}
+            <div class="poker-row">
+                ${pokerHand.map(element => `<img src="cards/${element.value}${element.suit}.png" class="poker-cars">
+                </img>`).join("")}
+            </div>
         </div>
     `
 }
